@@ -23,7 +23,7 @@ app.get('/flights', (req,res) => {
 
     axios.request(options).then(function (response) {
         console.log(response.data);
-        res.json(response.data);
+        res.json(response.data.slice(0,6));
     }).catch(function (error) {
         console.error(error);
     });
